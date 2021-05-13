@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-bg {
+  width: 100%;
+  background-image: url("../images/bg-desktop-dark.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  max-width: 95vw;
+  min-width: 50vw;
+  min-height: 90vh;
+  position: absolute;
+  top: 5rem;
+  left: 25rem;
+  z-index: 99;
+}
+
+.main .heading {
+  color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 2rem;
+  letter-spacing: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main #image__sun {
+  min-width: 2.3rem;
+  max-width: auto;
+  height: 2.5rem;
+}
+
+.main .input__item {
+  width: 100%;
+  background-color: #161722;
+  min-height: 10vh;
+  max-height: 10vh;
+  border-radius: 5px;
+  margin: 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main .input__item .cross {
+  display: none;
+  cursor: pointer;
+}
+
+.main .input__item .circle_check_cross {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0px 0.5rem;
+  background-size: cover;
+  border: 2px solid #9394a5;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main .input__item .circle_check_cross:hover {
+  border-radius: 50%;
+  -o-border-image: linear-gradient(to bottom, #57ddff, #c058f3);
+  border-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#57ddff),
+    to(#c058f3)
+  );
+  border-image: linear-gradient(to bottom, #57ddff, #c058f3);
+  border-image-slice: 5;
+}
+
+.main .input__item .circle_check_cross img {
+  width: 90%;
+}
+
+.main .input__item .input_1 {
+  height: 8vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fafafa;
+  width: 90%;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  color: #fafafa;
+  caret-color: #3a7bfd;
+}
+
+.main .attrs {
+  padding: 0px 20px;
+}
+
+.main .attrs .min {
+  font-size: 0.9rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #9394a5;
+  padding-left: 5px;
+}
+
+.main .attrs .all-attrs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #9394a5;
+  font-size: 0.8rem;
+  width: 26%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main .attrs .clear__completed {
+  font-size: 0.9rem;
+  color: #9394a5;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.no-mar {
+  margin: 0 !important;
+}
+
+.no-border {
+  border-radius: 0 !important;
+}
+
+.todos {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  padding: 0px 5px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  padding-right: 20px;
+}
+
+.todos:hover .cross {
+  display: block;
+}
+
+.todo {
+  font-size: 2rem;
+  color: #fafafa;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nex-bg {
+  background-color: #27293a;
+  width: 100vw;
+  z-index: 1;
+  height: 60vh;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.grey {
+  color: #9394a5 !important;
+}
+
+.bg {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#57ddff),
+    to(#c058f3)
+  );
+  background-image: linear-gradient(to bottom, #57ddff, #c058f3);
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1039px) {
+  .main {
+    left: 8rem;
+  }
+}
+
+@media only screen and (max-width: 732px) {
+  .main {
+    left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 618px) {
+  .main {
+    max-width: 80%;
+  }
+  .main .heading {
+    font-size: 1rem;
+  }
+  .todo {
+    font-size: 1rem;
+  }
+  .attrs {
+    flex-direction: column;
+    font-size: 0.3rem !important;
+  }
+  .attrs .min {
+    font-size: 1rem !important;
+  }
+  .attrs .all-attrs .all-attrs {
+    font-size: 0.5rem !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import "./variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+// This is background for the first video and i will change it using javascript or i had done just check the javascript file in the js folder
+.main-bg {
+  width: 100%;
+  background-image: url("../images/bg-desktop-dark.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// I had Given position absolute to make it center and on the background image
+.main {
+  max-width: 95vw;
+  min-width: 50vw;
+  min-height: 90vh;
+  position: absolute;
+  top: 5rem;
+  left: 25rem;
+  z-index: 99;
+  // Styling the header from here
+  .heading {
+    color: $heading-color;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 2rem;
+    letter-spacing: 20px;
+    font-family: $font;
+  }
+  //   Sun Image Handling
+  #image__sun {
+    min-width: 2.3rem;
+    max-width: auto;
+    height: 2.5rem;
+  }
+  .input__item {
+    width: 100%;
+    background-color: $fieldscolor;
+    min-height: 10vh;
+    max-height: 10vh;
+    border-radius: 5px;
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // Displaying the none of the cross
+    .cross {
+      display: none;
+      cursor: pointer;
+    }
+    // Finishes here
+    // handling the cross circle
+    .circle_check_cross {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0px 0.5rem;
+      background-size: cover;
+      border: 2px solid hsl(236, 9%, 61%);
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+      cursor: pointer;
+      &:hover {
+        border-radius: 50%;
+        border-image: linear-gradient(
+          to bottom,
+          hsl(192, 100%, 67%),
+          hsl(280, 87%, 65%)
+        );
+        border-image-slice: 5;
+      }
+      img {
+        width: 90%;
+      }
+    }
+
+    // Hangling the input field
+    .input_1 {
+      height: 8vh;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $heading-color;
+      width: 90%;
+      font-size: 2rem;
+      font-family: $font;
+      font-weight: 100;
+      color: hsl(0, 0%, 98%);
+      caret-color: hsl(220, 98%, 61%);
+    }
+  }
+  .attrs {
+    padding: 0px 20px;
+    .min {
+      font-size: 0.9rem;
+      font-family: $font;
+      color: hsl(236, 9%, 61%);
+      padding-left: 5px;
+    }
+    .all-attrs {
+      display: flex;
+      justify-content: space-between;
+      color: hsl(236, 9%, 61%);
+      font-size: 0.8rem;
+      width: 26%;
+      font-family: $font;
+    }
+    .clear__completed {
+      font-size: 0.9rem;
+      color: hsl(236, 9%, 61%);
+      font-family: $font;
+    }
+  }
+}
+.no-mar {
+  margin: 0 !important;
+}
+.no-border {
+  border-radius: 0 !important;
+}
+.todos {
+  align-items: center !important;
+  padding: 0px 5px;
+  &:hover .cross {
+    display: block;
+  }
+  transition: 0.5s all;
+  padding-right: 20px;
+}
+.todo {
+  font-size: 2rem;
+  color: hsl(0, 0%, 98%);
+  font-family: $font;
+}
+.nex-bg {
+  background-color: hsl(234, 20%, 19%);
+  width: 100vw;
+  z-index: 1;
+  height: 60vh;
+}
+.line {
+  text-decoration: line-through;
+}
+.grey {
+  color: hsl(236, 9%, 61%) !important;
+}
+.bg {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  background-position: center;
+  background-size: cover;
+}
+@media only screen and (max-width: 1039px) {
+  .main {
+    left: 8rem;
+  }
+}
+@media only screen and (max-width: 732px) {
+  .main {
+    left: 2rem;
+  }
+}
+@media only screen and (max-width: 618px) {
+  .main {
+    max-width: 80%;
+    .heading {
+      font-size: 1rem;
+    }
+    .attrs {
+      flex-direction: column;
+      font-size: 0.3rem !important;
+    }
+  }
+  .todo {
+    font-size: 1rem;
+  }
+}

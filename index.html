@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./app/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-bg"></div>
+    <div class="main">
+      <div class="heading">
+        <h2 class="heading__todo">TODO</h2>
+        <img src="/images/icon-sun.svg" id="image__sun" alt="" />
+      </div>
+      <div class="input__item">
+        <div class="circle_check_cross">
+          <img class="circle" src="" alt="" />
+        </div>
+        <input type="text" placeholder="Todo Here" class="input_1" />
+      </div>
+      <div
+        class="todos input__item no-mar no-border"
+        style="
+          border-top-left-radius: 5px !important;
+          border-top-right-radius: 5px !important;
+        "
+      >
+        <div class="circle_check_cross" id="1"></div>
+
+        <h3 class="todo line grey">Complete online javascript course</h3>
+        <div class="cross">
+          <img src="./images/icon-cross.svg" alt="" />
+        </div>
+      </div>
+      <div class="todos input__item no-mar no-border">
+        <div id="2" class="circle_check_cross"></div>
+
+        <h3 class="todo">Jog around the park 3x</h3>
+        <div class="cross">
+          <img src="./images/icon-cross.svg" alt="" />
+        </div>
+      </div>
+      <div class="todos input__item no-mar no-border">
+        <div id="3" class="circle_check_cross"></div>
+
+        <h3 class="todo">This is the Todo Yes Its is</h3>
+        <div class="cross">
+          <img src="./images/icon-cross.svg" alt="" />
+        </div>
+      </div>
+      <div
+        class="attrs input__item no-mar no-border"
+        style="
+          border-bottom-left-radius: 5px !important;
+          border-bottom-right-radius: 5px !important;
+        "
+      >
+        <h2 class="min">5 Items left</h2>
+        <div class="all-attrs">
+          <h2 class="all-attrs">All</h2>
+          <h2 class="all-attrs">Active</h2>
+          <h2 class="all-attrs">Completed</h2>
+        </div>
+        <h2 class="clear__completed">Clear Completed</h2>
+      </div>
+    </div>
+    <div class="nex-bg"></div>
+    <script src="app/js/script.js"></script>
+  </body>
+</html>
